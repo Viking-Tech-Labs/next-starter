@@ -1,18 +1,14 @@
 /** @type {import('next').NextConfig} */
+const path = require("path");
+
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  sassOptions: {
+    includePaths: [path.join(__dirname, "styles")],
+  },
   images: {
     domains: ["lh3.googleusercontent.com", "vercel.com"],
-  },
-  async redirects() {
-    return [
-      {
-        source: "/github",
-        destination: "https://github.com/steven-tey/precedent",
-        permanent: false,
-      },
-    ];
   },
 };
 
