@@ -7,4 +7,3 @@ storybook-static
 *.scss
 .git
 yarn-error.log
-stories
