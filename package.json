@@ -14,7 +14,8 @@
     "build-sb": "storybook build",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "pre-commit": "next lint"
   },
   "dependencies": {
     "@radix-ui/react-popover": "^1.0.2",
@@ -76,7 +77,13 @@
     "ts-jest": "^29.1.1"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "eslint --fix",
-    "*.{js,jsx,ts,tsx,css,scss,md}": "prettier --write"
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "eslint"
+    ],
+    "*.json": [
+      "prettier --write"
+    ]
   }
 }
