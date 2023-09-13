@@ -1,5 +1,7 @@
-import ComponentGrid from "@/components/home/component-grid";
+import React from "react";
 import Balancer from "react-wrap-balancer";
+
+import ComponentGrid from "@/components/home/component-grid";
 
 export default async function Home() {
   return (

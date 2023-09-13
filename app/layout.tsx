@@ -1,9 +1,13 @@
-import "@/styles/globals.scss";
+import { Suspense } from "react";
+
 import { Analytics } from "@vercel/analytics/react";
 import cx from "classnames";
-import { sfPro, inter } from "./fonts";
+
 import Nav from "@/components/layout/nav";
-import { Suspense } from "react";
+
+import { inter, sfPro } from "./fonts";
+
+import "@/styles/globals.scss";
 
 export const metadata = {
   title: "Precedent - Building blocks for your Next.js project",
